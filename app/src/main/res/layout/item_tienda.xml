@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Item tienda: réplica del glass-card de shop.html del BackFront -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="14dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/td_card_bg">
+
+    <!-- Icono del objeto (zona icon como el BackFront) -->
+    <ImageView
+        android:id="@+id/imageViewObjectIcon"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@drawable/td_input_bg"
+        android:layout_marginEnd="12dp"
+        android:padding="8dp"
+        android:scaleType="fitCenter" />
+
+    <!-- Info: nombre + tipo + precio -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/textViewObjectName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre del Objeto"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/textViewObjectType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TIPO"
+            android:textSize="10sp"
+            android:textColor="#22D3EE"
+            android:textStyle="bold"
+            android:letterSpacing="0.15"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/textViewObjectPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="💰 100"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#22D3EE" />
+
+    </LinearLayout>
+
+    <!-- Botón Comprar: verde como en el BackFront -->
+    <Button
+        android:id="@+id/btnComprar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/td_button_green"
+        android:text="Comprar"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp" />
+
+</LinearLayout>

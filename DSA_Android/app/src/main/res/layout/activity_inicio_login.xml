@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pantalla inicio (menú post-login): réplica del shop.html del BackFront -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tower_bg"
+    tools:context=".InicioLoginActivity">
+
+    <!-- Overlay oscuro -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#AA0F172A"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Header: logo + botón salir, como la barra del BackFront -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:background="#CC0F172A"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/combined_logo"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TowerDefense"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FBBF24"
+            android:fontFamily="sans-serif-medium"
+            android:paddingStart="12dp" />
+
+        <Button
+            android:id="@+id/buttonLogOut"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:background="@drawable/td_input_bg"
+            android:text="↩ Salir"
+            android:textColor="#EF4444"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp" />
+
+    </LinearLayout>
+
+    <!-- Menú de botones centrado -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="28dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- JUGAR: botón principal, verde grande -->
+        <Button
+            android:id="@+id/buttonJugar"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:background="@drawable/td_button_green"
+            android:text="🎮  JUGAR"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- TIENDA: dorado -->
+        <Button
+            android:id="@+id/buttonTienda"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/td_button_primary"
+            android:text="🛒  TIENDA"
+            android:textColor="#0F172A"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- INVENTARIO: dorado -->
+        <Button
+            android:id="@+id/buttonInventario"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/td_button_primary"
+            android:text="🎒  INVENTARIO"
+            android:textColor="#0F172A"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- EXTRAS: borde dorado, fondo oscuro -->
+        <Button
+            android:id="@+id/buttonExtras"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/td_card_bg"
+            android:text="⚡  EVENTOS / RANKING / EQUIPO"
+            android:textColor="#FBBF24"
+            android:textStyle="bold"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

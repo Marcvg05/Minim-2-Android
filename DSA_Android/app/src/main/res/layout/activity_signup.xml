@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Registro: réplica del register.html del BackFront en Android -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tower_bg"
+    android:fillViewport="true"
+    tools:context=".SignupActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#D9000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="24dp">
+
+            <LinearLayout
+                android:id="@+id/signup_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/td_card_bg"
+                android:orientation="vertical"
+                android:padding="28dp">
+
+                <!-- Logo -->
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/combined_logo"
+                    android:scaleType="fitCenter"
+                    android:layout_marginBottom="10dp" />
+
+                <!-- Título en dorado como BackFront -->
+                <TextView
+                    android:id="@+id/tvSignupTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Crear Cuenta"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#FBBF24"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="20dp" />
+
+                <!-- USUARIO -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="USUARIO" android:textSize="11sp" android:textColor="#FBBF24"
+                    android:textStyle="bold" android:letterSpacing="0.12" android:layout_marginBottom="6dp" />
+                <EditText
+                    android:id="@+id/editUsuari"
+                    android:layout_width="match_parent" android:layout_height="48dp"
+                    android:background="@drawable/td_input_bg" android:hint="@usuario"
+                    android:inputType="textPersonName" android:padding="12dp"
+                    android:textColor="#FFFFFF" android:textColorHint="#475569"
+                    android:layout_marginBottom="14dp" />
+
+                <!-- EMAIL -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="EMAIL" android:textSize="11sp" android:textColor="#FBBF24"
+                    android:textStyle="bold" android:letterSpacing="0.12" android:layout_marginBottom="6dp" />
+                <EditText
+                    android:id="@+id/editEmail"
+                    android:layout_width="match_parent" android:layout_height="48dp"
+                    android:background="@drawable/td_input_bg" android:hint="correo@ejemplo.com"
+                    android:inputType="textEmailAddress" android:padding="12dp"
+                    android:textColor="#FFFFFF" android:textColorHint="#475569"
+                    android:layout_marginBottom="14dp" />
+
+                <!-- CONTRASEÑA -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="CONTRASEÑA" android:textSize="11sp" android:textColor="#FBBF24"
+                    android:textStyle="bold" android:letterSpacing="0.12" android:layout_marginBottom="6dp" />
+                <EditText
+                    android:id="@+id/EditPassword"
+                    android:layout_width="match_parent" android:layout_height="48dp"
+                    android:background="@drawable/td_input_bg" android:hint="••••••••"
+                    android:inputType="textPassword" android:padding="12dp"
+                    android:textColor="#FFFFFF" android:textColorHint="#475569"
+                    android:drawableEnd="@drawable/ic_visibility_off" android:drawablePadding="8dp"
+                    android:layout_marginBottom="6dp" />
+
+                <!-- (Requisitos de contraseña eliminados) -->
+
+                <!-- REPETIR CONTRASEÑA -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="REPETIR CONTRASEÑA" android:textSize="11sp" android:textColor="#FBBF24"
+                    android:textStyle="bold" android:letterSpacing="0.12" android:layout_marginBottom="6dp" />
+                <EditText
+                    android:id="@+id/editPassword2"
+                    android:layout_width="match_parent" android:layout_height="48dp"
+                    android:background="@drawable/td_input_bg" android:hint="••••••••"
+                    android:inputType="textPassword" android:padding="12dp"
+                    android:textColor="#FFFFFF" android:textColorHint="#475569"
+                    android:drawableEnd="@drawable/ic_visibility_off" android:drawablePadding="8dp"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- Botón Registrarme: dorado como BackFront -->
+                <Button
+                    android:id="@+id/SignUp"
+                    android:layout_width="match_parent" android:layout_height="52dp"
+                    android:background="@drawable/td_button_primary"
+                    android:text="CREAR CUENTA" android:textColor="#0F172A"
+                    android:textStyle="bold" android:textSize="15sp"
+                    android:letterSpacing="0.08" android:layout_marginBottom="12dp" />
+
+                <!-- Volver -->
+                <Button
+                    android:id="@+id/btnBackToMain"
+                    android:layout_width="match_parent" android:layout_height="48dp"
+                    android:background="@drawable/td_input_bg"
+                    android:text="VOLVER" android:textColor="#94A3B8"
+                    android:textStyle="bold" android:textSize="14sp" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="48dp" android:layout_height="48dp"
+                    android:layout_gravity="center" android:layout_marginTop="16dp"
+                    android:indeterminate="true" android:visibility="gone" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</ScrollView>
